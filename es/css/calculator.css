@@ -1,0 +1,204 @@
+.weight-calculator {
+  height: 100%;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.wc-title {
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: normal;
+  align-self: flex-start;
+  font-size: 1.125rem;
+}
+
+.wc-form {
+  width: 30%;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.wc-form form{
+    display: flex;
+}
+
+.wc-input {
+  vertical-align: middle;
+  height: auto;
+  color: #101828;
+  background-color: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 0.5rem;
+  margin-bottom: 0;
+  padding: 0.5rem 0.875rem;
+  transition: all 0.3s;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  min-height: 3.38rem;
+  display: block;
+}
+
+.wc-input:-moz-placeholder {
+  color: #999;
+}
+
+.wc-input::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.wc-input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.wc-input:focus {
+  border-color: #3898ec;
+  outline: 0;
+}
+
+.wc-input:focus {
+  color: #101828;
+  border-color: #667085;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05),
+    0 0 0 4px rgba(234, 236, 240, 0.32);
+}
+
+.wc-input::-ms-input-placeholder {
+  color: #475467;
+}
+
+.wc-input::placeholder {
+  color: #475467;
+}
+
+.wc-input.is-graph {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.wc-form-done {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.wc-form-fail {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.range_wrap {
+  width: 100%;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.range-slider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1em;
+}
+
+.slider {
+  height: 100%;
+  max-width: 700px;
+  background-color: transparent;
+  position: relative;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 0.75em;
+  /* Specified height */
+  border-radius: 100vw;
+  background: rgba(0, 87, 184, 0.2);
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  cursor: pointer;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 2em;
+  /* Set a specific slider handle width */
+  height: 2em;
+  /* Slider handle height */
+  border-radius: 100vw;
+  background: #0057b8;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 2em;
+  /* Set a specific slider handle width */
+  height: 2em;
+  /* Slider handle height */
+  border-radius: 100vw;
+  background: #0057b8;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.w-embed:before,
+.w-embed:after {
+  content: " ";
+  grid-area: 1/1/2/2;
+  display: table;
+}
+
+.weight-chart-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.text-size-large {
+  letter-spacing: normal;
+  font-size: 1.63rem;
+}
+
+.weight-loss-prediction-text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.weight-loss-prediction-text.gradient {
+  letter-spacing: -0.02em;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #8bc6ec, #0057b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: -8px;
+  font-size: 3.25rem;
+}
+
+
+
+/* *********************************** */
+
+
+

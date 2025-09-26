@@ -1,0 +1,447 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 818px;
+}
+
+.u-section-1 .u-list-1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.u-section-1 .u-repeater-1 {
+  grid-template-columns: repeat(2, calc(50% - 15px));
+  min-height: 698px;
+  grid-gap: 30px;
+}
+
+.u-section-1 .u-list-item-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images01.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/38a4e0ed7f3a5e1180480646/cheerful-business-woman-make-winner-gesture.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-1 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+.u-section-1 .u-list-item-2 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-2 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images01.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/aa44210fb5d454d3abe825ab/mand-holding-cup.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-3 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+.u-section-1 .u-list-item-3 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-3 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-3 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images01.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/6f940700548f5c268357ec80/pexels-moose-photos-1586973.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-5 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+.u-section-1 .u-list-item-4 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-4 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-4 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images02.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/1acd28d5ff2155d79c0bad81/pexels-ravi-k-938642.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-7 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-8 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+.u-section-1 .u-list-item-5 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-5 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-5 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images01.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/8decfbfd322b5dceb8bf16ca/pexels-humphrey-muleba-2058659.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-9 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-10 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+.u-section-1 .u-list-item-6 {
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-6 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-6 {
+  width: 110px;
+  height: 110px;
+  background-image: url("//images01.nicepagecdn.com/a1389d7bc73adea1e1c1fb7e/c816b60741435c3991e9ee43/pexels-andrea-piacquadio-901424.jpg");
+  background-position: 50% 50%;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-text-11 {
+  margin: -110px 0 0 147px;
+}
+
+.u-section-1 .u-text-12 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 20px auto 17px 148px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 722px;
+  }
+
+  .u-section-1 .u-list-1 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    min-height: 583px;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .u-section-1 .u-image-2 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-3 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-4 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .u-section-1 .u-image-3 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-5 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-6 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .u-section-1 .u-image-4 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-7 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-8 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .u-section-1 .u-image-5 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-9 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-10 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .u-section-1 .u-image-6 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-text-11 {
+    width: auto;
+    margin-top: -115px;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-text-12 {
+    width: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 818px;
+  }
+
+  .u-section-1 .u-list-1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    grid-template-columns: 100%;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-6 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-7 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-8 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-10 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-top: 20px;
+    margin-right: 245px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-12 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: 105px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 105px;
+  }
+
+  .u-section-1 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-right: 105px;
+  }
+
+  .u-section-1 .u-container-layout-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-7 {
+    margin-right: 105px;
+  }
+
+  .u-section-1 .u-container-layout-5 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-right: 105px;
+  }
+
+  .u-section-1 .u-container-layout-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 105px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-7 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 0;
+  }
+}
