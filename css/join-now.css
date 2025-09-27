@@ -1,3 +1,423 @@
-.join-form{
-    /* display: none; */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;600&display=swap');
+  
+:root {
+  --satoshi-switch: "Satoshi", sans-serif;
+}
+  :root {
+  /* --light-green: #90ee90; */
+  --light-green: #e9ff86;
+    --f3-grey: #f3f3f3; 
+
+}
+
+  
+  .join-form{
+   padding: 50px 8%;
+}
+
+.form{
+ display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.heading{
+    margin-bottom: 20px;
+    color:#000;
+    font-size: 43px;
+text-align: center;
+line-height: 49px;
+/* font-weight: 300; */
+font-family: var(--satoshi-switch);
+}
+
+ .titles{
+justify-content: center;
+    width: 50%;
+    display: flex;
+     margin: 0 0 15px;
+      margin-top: 0;
+ }
+.e-form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+}
+.first-title{
+       
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 400;
+        text-align: center;
+        font-family: var(--satoshi-switch);
+}
+
+.options{
+     width: 100%;
+    margin-bottom: 40px;
+    font-family: var(--satoshi-switch);
+ border-radius: 6px;
+    line-height:50px;
+     color: #696969;
+     /* color: #333333; */
+    background-color: #fff;
+    /* border: 1px solid #000; */
+    line-height: 20px;
+    /* text-transform: none; */
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 0;
+     display: block;
+    padding: 12px 12px;
+    font-size: 14px;
+
+}
+/* .options:hover{
+    border: 1px solid blue;
+} */
+h1{
+     
+            margin: 0.67em 0;
+            display: block;
+}
+.second-title{
+     font-family: var(--satoshi-switch);
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 28px;
+      font-weight: 400;
+        text-align: center;
+        color: #000;
+
+}
+.input-fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.input{
+    width: 49%;
+    margin-bottom: 0;
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 50px;
+    display: block;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    background:#ffff;
+    color: #333333;
+    font-size: 16px;
+}
+.third-title{
+     font-family: var(--satoshi-switch);
+     margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 28px;
+      font-weight: 400;
+        text-align: center;
+        color: #000;
+        margin-top: 0;
+        padding-bottom: 0;
+}
+div{
+    display: block;
+}
+label{
+    font-weight: bold;
+    cursor: pointer;
+}
+.gender{
+     display: flex;
+  align-items: center;   
+  justify-content: space-between; 
+  gap: 10px;
+  width: 567px;
+  height: 70px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.gender:hover{
+        background-color: #e9ff86;
+}
+ .gender-male input[type='checkbox']{
+   width: 13px;
+   height: 13px;
+    margin-left: 0;
+    margin-top: 15px;
+
+    line-height: normal;
+}
+ .gender-female input[type='checkbox']{
+   width: 13px;
+   height: 13px;
+    margin-left: 0;
+    margin-top: 15px;
+
+    line-height: normal;
+}
+.gender-male{
+   
+     display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.gender-female{
+   
+     display: flex;
+  align-items: center;
+  gap: 6px;
+ 
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.image{
+     width: 50px;
+  height: 50px;
+  object-fit: cover;
+ 
+}
+.female{
+    font-family: var(--satoshi-switch);
+    color: #000;
+    font-size: 15px;
+    font-weight: 800;
+}
+.G-male{
+    font-family: var(--satoshi-switch);
+    color: #000;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.four-title{
+    font-family: var(--satoshi-switch);
+     margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 28px;
+      font-weight: 400;
+        text-align: center;
+        color: #000;
+        margin-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+}
+   .E-email{
+    width: 567px;
+    height: 70px;
+    margin-bottom: 15px;
+    font-size: 16px;
+        font-family: var(--satoshi-switch);
+        border: 1px solid black;
+        border-radius: 6px;
+        height: 50px;
+  margin-left: 50px;
+    padding-left: 15px;
+    padding-right: 0;
+    display: block;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    color: #333333;
+    /* background-color: #ffff; */
+}
+.Note{
+        width: 567px;
+        height: 63px;
+    /* margin-bottom: 40px; */
+    display: block;
+        background-color: var(--f3-grey);
+    text-align: center;
+    border-radius: 9px;
+        padding: 13px;
+       margin-left: 50px;
+}
+.email-note{
+   
+     display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  
+}
+.E-note{
+    margin-left: 5px;
+    padding-left: 0;
+    font-size: 12px;
+    line-height: 16px;
+font-family: var(--satoshi);
+    color: #000;
+    text-align: left;
+    /* margin-left: 5px; */
+    font-size: 12px;
+display: inline-block;
+    cursor: pointer;
+    font-weight: normal;
+    /* margin-bottom: 40px; */
+   
+}
+.email-note input[type='checkbox']{
+   width: 13px;
+   height: 13px;
+    margin-left: 0;
+   
+}
+.five-title{
+    font-family: var(--satoshi-switch);
+     margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 28px;
+      font-weight: 400;
+        text-align: center;
+        color: #000;
+       
+        margin-top: 50px;
+        padding-bottom: 0;
+}
+   .E-email{
+    width: 567px;
+    height: 70px;
+    margin-bottom: 15px;
+    font-size: 16px;
+        font-family: var(--satoshi-switch);
+        border: 1px solid black;
+        border-radius: 6px;
+        height: 50px;
+  margin-left: 50px;
+    padding-left: 15px;
+    padding-right: 0;
+    display: block;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    color: #333333;
+
+}
+.Six-title{
+    font-family: var(--satoshi-switch);
+     margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 28px;
+      font-weight: 400;
+        text-align: center;
+        color: #000;
+       justify-content: center;
+        /* margin-top: 50px; */
+        padding-bottom: 0;
+        display: flex;
+        margin-left: 50px;
+        
+
+}
+.message{
+    font-family: var(--satoshi-switch);
+     text-align: center;
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-weight: 500;
+}
+.boolean{
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+    margin-left: 50px;
+}
+.Yes{
+    width: 278px;
+        height: 57px;
+    /* padding-bottom: 19px;
+    padding-top: 25px; */
+border: 1px solid #000;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+ 
+}
+
+.checkbox-yes{
+  
+    display: flex;      
+  align-items: center;  
+  gap: 8px;  
+}
+
+.Yes:hover{
+        background-color: #e9ff86;
+}
+ .checkbox-yes input[type='checkbox']{
+   width: 13px;
+   height: 13px;
+    margin-left: 0;
+    margin-top: 15px;
+    line-height: normal;
+}
+.check-yes{
+        font-family: var(--satoshi-switch);
+    color: #000;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+}
+.Note-msg{
+        width: 567px;
+        height: 100px;
+        background-color: var(--f3-grey);
+    text-align: center;
+    border-radius: 9px;
+        padding: 13px;
+       margin-left: 50px;
+}
+.email-note-msg{
+     display: flex;
+  align-items: center; 
+}
+.E-note-msg{
+    font-size: 10px;
+   font-family: var(--satoshi);
+    color: #000;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 15px;
+   
+}
+.email-note-msg input[type='checkbox']{
+   width: 13px;
+   height: 13px;
+    margin-left: 0px;
+    margin-bottom: 40px;
+
+}
+.button{
+    width: 567px;
+    height: 60px;
+      background-color: var(--light-green);
+    font-family: var(--arrow);
+    color: var(--black);
+    border-radius: 9px;
+    /* margin-top: 15px; */
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+        display: inline-block;
+    padding: 9px 15px;
+        text-decoration: none;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 50px;
 }
