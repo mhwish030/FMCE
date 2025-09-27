@@ -76,7 +76,7 @@ End of Tawk.to Script-->
                             <div class="hero_content">
                                 <h2 class="title_xl">GLP-1 Prescription Medication Delivered to your doorstep</h2>
                                 <p>Doctor prescribed Semaglutide & Tirzepatide. <br>No medical insurance required.</p><br>
-                                <a href="#" class="button">See if I qualify <img src="img/right-arrow.svg" alt=""></a>
+                                <a href="/join-now.html" target="_blank" rel="noopener noreferrer" class="button">See if I qualify <img src="img/right-arrow.svg" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -387,7 +387,7 @@ For complete pricing on our subscription weight loss plans, <a href="plans.html"
 </div>
 </div>
 
-<div class="text-center"><a class="button" href="#">See if I qualify<img alt="" src="img/right-arrow.svg" /></a>
+<div class="text-center"><a class="button" href="/join-now.html" target="_blank" rel="noopener noreferrer">See if I qualify<img alt="" src="img/right-arrow.svg" /></a>
 </div>
 </div>
 
