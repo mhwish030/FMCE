@@ -56,212 +56,365 @@
           data-name="Join Form"
           class="registration-form"
         >
-          <div class="form-label">
-            Let's make sure we are licensed in your state
+          <!-- Progress Indicator -->
+          <div class="progress-indicator">
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">3</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="4">4</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="5">5</div>
           </div>
-          <select class="form-select" name="state" id="state" required>
-            <option value="" disabled selected>State...</option>
-            <option value="Alabama">Alabama</option>
-            <option value="Alaska">Alaska</option>
-            <option value="Arizona">Arizona</option>
-            <option value="Arkansas">Arkansas</option>
-            <option value="California">California</option>
-            <option value="Colorado">Colorado</option>
-            <option value="Connecticut">Connecticut</option>
-            <option value="Delaware">Delaware</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Hawaii">Hawaii</option>
-            <option value="Idaho">Idaho</option>
-            <option value="Illinois">Illinois</option>
-            <option value="Indiana">Indiana</option>
-            <option value="Iowa">Iowa</option>
-            <option value="Kansas">Kansas</option>
-            <option value="Kentucky">Kentucky</option>
-            <option value="Louisiana">Louisiana</option>
-            <option value="Maine">Maine</option>
-            <option value="Maryland">Maryland</option>
-            <option value="Massachusetts">Massachusetts</option>
-            <option value="Michigan">Michigan</option>
-            <option value="Minnesota">Minnesota</option>
-            <option value="Mississippi">Mississippi</option>
-            <option value="Missouri">Missouri</option>
-            <option value="Montana">Montana</option>
-            <option value="Nebraska">Nebraska</option>
-            <option value="Nevada">Nevada</option>
-            <option value="New Hampshire">New Hampshire</option>
-            <option value="New Jersey">New Jersey</option>
-            <option value="New Mexico">New Mexico</option>
-            <option value="New York">New York</option>
-            <option value="North Carolina">North Carolina</option>
-            <option value="North Dakota">North Dakota</option>
-            <option value="Ohio">Ohio</option>
-            <option value="Oklahoma">Oklahoma</option>
-            <option value="Oregon">Oregon</option>
-            <option value="Pennsylvania">Pennsylvania</option>
-            <option value="Rhode Island">Rhode Island</option>
-            <option value="South Carolina">South Carolina</option>
-            <option value="South Dakota">South Dakota</option>
-            <option value="Tennessee">Tennessee</option>
-            <option value="Texas">Texas</option>
-            <option value="Utah">Utah</option>
-            <option value="Vermont">Vermont</option>
-            <option value="Virginia">Virginia</option>
-            <option value="Washington">Washington</option>
-            <option value="Washington D.C.">Washington D.C.</option>
-            <option value="West Virginia">West Virginia</option>
-            <option value="Wisconsin">Wisconsin</option>
-            <option value="Wyoming">Wyoming</option>
-          </select>
 
-          <div class="form-label">
-            Who do I have the pleasure of talking to?
+          <!-- Step 1: Personal Information & State -->
+          <div class="form-section active" id="section-1">
+            <div class="form-label">
+              Let's make sure we are licensed in your state
+            </div>
+            <select class="form-select" name="state" id="state" required>
+              <option value="" disabled selected>State...</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Washington">Washington</option>
+              <option value="Washington D.C.">Washington D.C.</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>
+            </select>
+            <div class="form-label">
+              Who do I have the pleasure of talking to?
+            </div>
+            <div class="name-inputs">
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="First Name"
+                class="form-input"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Last Name"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-label">What was your gender at birth?</div>
+            <div class="gender-selection">
+              <label class="gender-option">
+                <div class="gender-input">
+                  <input
+                    type="checkbox"
+                    name="gender"
+                    id="gender-male"
+                    value="male"
+                    class="form-checkbox"
+                  />
+                  <span class="gender-label">Male</span>
+                </div>
+                <img
+                  src="https://join.newself.com/images/Male.svg"
+                  alt="male"
+                  class="gender-icon"
+                />
+              </label>
+              <label class="gender-option">
+                <div class="gender-input">
+                  <input
+                    type="checkbox"
+                    name="gender"
+                    id="gender-female"
+                    value="female"
+                    class="form-checkbox"
+                  />
+                  <span class="gender-label">Female</span>
+                </div>
+                <img
+                  src="https://join.newself.com/images/Female.svg"
+                  alt="female"
+                  class="gender-icon"
+                />
+              </label>
+            </div>
           </div>
-          <div class="name-inputs">
+
+          <!-- Step 2: Contact Information -->
+          <div class="form-section" id="section-2">
+            <div class="form-label">Please enter your email</div>
             <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              placeholder="First Name"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
               class="form-input"
               required
             />
+            <div class="consent-notice">
+              <label for="check" class="consent-checkbox">
+                <input
+                  type="checkbox"
+                  name="emailConsent"
+                  id="check"
+                  required
+                />
+                <div class="consent-text">
+                  I agree to receive doctor correspondence, transactional and/or
+                  marketing messaging from NewSelf to the email address that I
+                  provided above.
+                </div>
+              </label>
+            </div>
+
+            <div class="form-label">Please enter your mobile number</div>
             <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              placeholder="Last Name"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone"
               class="form-input"
               required
             />
-          </div>
 
-          <div class="form-label">What was your gender at birth?</div>
-          <div class="gender-selection">
-            <label class="gender-option">
-              <div class="gender-input">
-                <input
-                  type="checkbox"
-                  name="gender"
-                  id="gender-male"
-                  value="male"
-                  class="form-checkbox"
-                />
-                <span class="gender-label">Male</span>
+            <div class="form-label">
+              Can we send you text messages about your prescription?
+            </div>
+            <div class="form-description">
+              (including tracking information and refill information)
+            </div>
+
+            <div class="text-consent-options">
+              <label class="consent-option">
+                <div class="consent-input">
+                  <input
+                    type="checkbox"
+                    name="text_consent"
+                    id="text-yes"
+                    value="Yes"
+                    class="form-checkbox"
+                  />
+                  <span class="consent-label">Yes</span>
+                </div>
+              </label>
+              <label class="consent-option">
+                <div class="consent-input">
+                  <input
+                    type="checkbox"
+                    name="text_consent"
+                    id="text-no"
+                    value="No"
+                    class="form-checkbox"
+                  />
+                  <span class="consent-label">No</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="sms-consent-notice">
+              <div class="sms-consent-checkbox">
+                <input type="checkbox" name="smsConsent" id="checked" />
+                <label for="checked" class="sms-consent-text">
+                  By checking this box, I also consent by electronic signature
+                  to receive phone calls and/or SMS text messages at the phone
+                  number(s) below, including my wireless number if provided. I
+                  understand these calls may be generated using an automated
+                  technology, pre-recorded voices and that data rates may apply.
+                  I understand that my consent is not required to buy
+                  goods/services and I may opt out at any time to avoid
+                  receiving calls or SMS text messages.</label
+                >
               </div>
-              <img
-                src="https://join.newself.com/images/Male.svg"
-                alt="male"
-                class="gender-icon"
-              />
-            </label>
-            <label class="gender-option">
-              <div class="gender-input">
-                <input
-                  type="checkbox"
-                  name="gender"
-                  id="gender-female"
-                  value="female"
-                  class="form-checkbox"
-                />
-                <span class="gender-label">Female</span>
-              </div>
-              <img
-                src="https://join.newself.com/images/Female.svg"
-                alt="female"
-                class="gender-icon"
-              />
-            </label>
+            </div>
           </div>
 
-          <div class="form-label">Please enter your email</div>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            class="form-input"
-            required
-          />
-          <div class="consent-notice">
-            <label for="check" class="consent-checkbox">
-              <input type="checkbox" name="emailConsent" id="check" />
-              <div class="consent-text">
-                I agree to receive doctor correspondence, transactional and/or
-                marketing messaging from NewSelf to the email address that I
-                provided above.
-              </div>
-            </label>
-          </div>
-
-          <div class="form-label">Please enter your mobile number</div>
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Enter your phone"
-            class="form-input"
-            required
-          />
-
-          <div class="form-label">
-            Can we send you text messages about your prescription?
-          </div>
-          <div class="form-description">
-            (including tracking information and refill information)
-          </div>
-
-          <div class="text-consent-options">
-            <label class="consent-option">
-              <div class="consent-input">
-                <input
-                  type="checkbox"
-                  name="text_consent"
-                  id="text-yes"
-                  value="Yes"
-                  class="form-checkbox"
-                />
-                <span class="consent-label">Yes</span>
-              </div>
-            </label>
-            <label class="consent-option">
-              <div class="consent-input">
-                <input
-                  type="checkbox"
-                  name="text_consent"
-                  id="text-no"
-                  value="No"
-                  class="form-checkbox"
-                />
-                <span class="consent-label">No</span>
-              </div>
-            </label>
-          </div>
-
-          <div class="sms-consent-notice">
-            <div class="sms-consent-checkbox">
-              <input type="checkbox" name="smsConsent" id="checked" />
-              <label for="checked" class="sms-consent-text">
-                By checking this box, I also consent by electronic signature to
-                receive phone calls and/or SMS text messages at the phone
-                number(s) below, including my wireless number if provided. I
-                understand these calls may be generated using an automated
-                technology, pre-recorded voices and that data rates may apply. I
-                understand that my consent is not required to buy goods/services
-                and I may opt out at any time to avoid receiving calls or SMS
-                text messages.</label
+          <!-- Step 3: Date of Birth -->
+          <div class="form-section" id="section-3">
+            <div class="form-label">What is your date of birth?</div>
+            <div class="form-description">
+              Based on your date of birth our doctors can prescribe the proper
+              prescription.
+            </div>
+            <div class="dob-inputs">
+              <select
+                class="form-select dob-select"
+                name="month"
+                id="month"
+                required
               >
+                <option value="" disabled selected>Month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <input
+                type="text"
+                name="day"
+                id="day"
+                placeholder="Day"
+                class="form-input dob-input"
+                maxlength="2"
+                required
+              />
+              <input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="Year"
+                class="form-input dob-input"
+                maxlength="4"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Step 4: Height and Weight -->
+          <div class="form-section" id="section-4">
+            <div class="form-label">What is your height and weight?</div>
+            <div class="form-description">
+              We'll use this to determine your Body mass Index (BMI) for
+              diagnosis. remember, BMI is a measure of size - not health
+            </div>
+
+            <div class="height-weight-inputs">
+              <div class="height-inputs">
+                <div class="input-with-label">
+                  <input
+                    type="text"
+                    name="feet"
+                    id="feet"
+                    placeholder="Feet"
+                    class="form-input height-input"
+                    maxlength="1"
+                    required
+                  />
+                  <span class="input-label">ft.</span>
+                </div>
+                <div class="input-with-label">
+                  <input
+                    type="text"
+                    name="inches"
+                    id="inches"
+                    placeholder="Inches"
+                    class="form-input height-input"
+                    maxlength="2"
+                    required
+                  />
+                  <span class="input-label">in.</span>
+                </div>
+              </div>
+
+              <div class="weight-input">
+                <div class="input-with-label">
+                  <input
+                    type="text"
+                    name="weight"
+                    id="weight"
+                    placeholder="Weight in pounds"
+                    class="form-input weight-input"
+                    maxlength="3"
+                    required
+                  />
+                  <span class="input-label">lbs.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Desired Weight -->
+          <div class="form-section" id="section-5">
+            <div class="form-label">What is your desired weight?</div>
+            <div class="desired-weight-input">
+              <div class="input-with-label">
+                <input
+                  type="text"
+                  name="desiredWeight"
+                  id="desiredWeight"
+                  placeholder="What is your goal weight in pounds?"
+                  class="form-input desired-weight-input-field"
+                  maxlength="3"
+                  required
+                />
+                <span class="input-label">lbs.</span>
+              </div>
             </div>
           </div>
 
           <div class="form-submit">
+            <button
+              type="button"
+              class="back-btn"
+              id="back-btn"
+              style="display: none"
+            >
+              <img src="img/right-arrow.svg" alt="Back" class="back-icon" />
+              Back
+            </button>
             <input
-              type="submit"
-              value="Submit"
+              type="button"
+              value="Next"
               class="submit-btn"
-              id="submit-btn"
+              id="next-btn"
             />
-            <img src="img/right-arrow.svg" alt="Submit" class="submit-icon" />
           </div>
+          <div id="form-errors" class="form-errors"></div>
         </form>
       </div>
     </div>
@@ -270,9 +423,10 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("join-form");
+        let currentStep = 1;
+        const totalSteps = 5;
 
         // Initialize EmailJS with your public key
-        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
         emailjs.init("tmG0DUq1XDCHB0RiL");
 
         // Handle gender checkboxes - only allow one selection
@@ -309,11 +463,362 @@
           });
         });
 
-        form.addEventListener("submit", function (e) {
-          e.preventDefault(); // Prevent default form submission
+        // Function to show specific step
+        function showStep(step) {
+          // Hide all sections
+          const sections = document.querySelectorAll(".form-section");
+          sections.forEach((section) => {
+            section.classList.remove("active");
+          });
 
+          // Show current section
+          const currentSection = document.getElementById(`section-${step}`);
+          if (currentSection) {
+            currentSection.classList.add("active");
+          }
+
+          // Update progress indicator
+          updateProgressIndicator(step);
+        }
+
+        // Function to update progress indicator
+        function updateProgressIndicator(step) {
+          const progressSteps = document.querySelectorAll(".progress-step");
+          const progressLines = document.querySelectorAll(".progress-line");
+
+          progressSteps.forEach((stepElement, index) => {
+            stepElement.classList.remove("active", "completed");
+            if (index + 1 < step) {
+              stepElement.classList.add("completed");
+            } else if (index + 1 === step) {
+              stepElement.classList.add("active");
+            }
+          });
+
+          progressLines.forEach((lineElement, index) => {
+            lineElement.classList.remove("completed");
+            if (index + 1 < step) {
+              lineElement.classList.add("completed");
+            }
+          });
+        }
+
+        // Function to validate current step
+        function validateStep(step) {
+          let isValid = true;
+          const currentSection = document.getElementById(`section-${step}`);
+          const errorContainer = document.getElementById("form-errors");
+
+          // Clear previous errors
+          errorContainer.innerHTML = "";
+
+          // Remove previous error styles
+          currentSection
+            .querySelectorAll(".form-input, .form-select, .gender-option")
+            .forEach((input) => {
+              input.classList.remove("error");
+            });
+
+          // Remove previous error messages from individual fields
+          currentSection
+            .querySelectorAll(".error-message")
+            .forEach((errorMsg) => {
+              errorMsg.remove();
+            });
+
+          if (step === 1) {
+            // Validate state selection, name, and gender
+            const stateSelect = document.getElementById("state");
+            const firstName = document.getElementById("firstName");
+            const lastName = document.getElementById("lastName");
+            const genderChecked = document.querySelector(
+              'input[name="gender"]:checked'
+            );
+
+            if (!stateSelect.value) {
+              stateSelect.classList.add("error");
+              addErrorToContainer("Please select your state");
+              isValid = false;
+            }
+            if (!firstName.value.trim()) {
+              firstName.classList.add("error");
+              addErrorToContainer("Please enter your first name");
+              isValid = false;
+            }
+            if (!lastName.value.trim()) {
+              lastName.classList.add("error");
+              addErrorToContainer("Please enter your last name");
+              isValid = false;
+            }
+            if (!genderChecked) {
+              document.querySelectorAll(".gender-option").forEach((option) => {
+                option.classList.add("error");
+              });
+              addErrorToContainer("Please select your gender");
+              isValid = false;
+            }
+          } else if (step === 2) {
+            // Validate email, phone, and consent
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const emailConsent = document.getElementById("check");
+            const textConsent = document.querySelector(
+              'input[name="text_consent"]:checked'
+            );
+            const smsConsent = document.getElementById("checked");
+
+            if (!email.value.trim()) {
+              email.classList.add("error");
+              addErrorToContainer("Please enter your email");
+              isValid = false;
+            } else if (!isValidEmail(email.value)) {
+              email.classList.add("error");
+              addErrorToContainer("Please enter a valid email address");
+              isValid = false;
+            }
+            if (!phone.value.trim()) {
+              phone.classList.add("error");
+              addErrorToContainer("Please enter your phone number");
+              isValid = false;
+            }
+            if (!emailConsent.checked) {
+              addErrorToContainer(
+                "Please agree to receive email communications"
+              );
+              isValid = false;
+            }
+            if (!textConsent) {
+              document.querySelectorAll(".consent-option").forEach((option) => {
+                option.classList.add("error");
+              });
+              addErrorToContainer("Please select your text message preference");
+              isValid = false;
+            }
+            if (!smsConsent.checked) {
+              addErrorToContainer("Please agree to the SMS consent terms");
+              isValid = false;
+            }
+          } else if (step === 3) {
+            // Validate date of birth
+            const month = document.getElementById("month");
+            const day = document.getElementById("day");
+            const year = document.getElementById("year");
+
+            if (!month.value) {
+              month.classList.add("error");
+              addErrorToContainer("Please select your birth month");
+              isValid = false;
+            }
+            if (!day.value.trim()) {
+              day.classList.add("error");
+              addErrorToContainer("Please enter your birth day");
+              isValid = false;
+            } else if (!isValidDay(day.value)) {
+              day.classList.add("error");
+              addErrorToContainer("Please enter a valid day (1-31)");
+              isValid = false;
+            }
+            if (!year.value.trim()) {
+              year.classList.add("error");
+              addErrorToContainer("Please enter your birth year");
+              isValid = false;
+            } else if (!isValidYear(year.value)) {
+              year.classList.add("error");
+              addErrorToContainer("Please enter a valid year");
+              isValid = false;
+            } else if (month.value && day.value && year.value) {
+              // Validate complete date
+              if (!isValidDate(month.value, day.value, year.value)) {
+                month.classList.add("error");
+                day.classList.add("error");
+                year.classList.add("error");
+                addErrorToContainer("Please enter a valid date");
+                isValid = false;
+              }
+            }
+          } else if (step === 4) {
+            // Validate height and weight
+            const feet = document.getElementById("feet");
+            const inches = document.getElementById("inches");
+            const weight = document.getElementById("weight");
+
+            if (!feet.value.trim()) {
+              feet.classList.add("error");
+              addErrorToContainer("Please enter your height in feet");
+              isValid = false;
+            } else if (!isValidFeet(feet.value)) {
+              feet.classList.add("error");
+              addErrorToContainer("Please enter a valid height in feet (1-8)");
+              isValid = false;
+            }
+            if (!inches.value.trim()) {
+              inches.classList.add("error");
+              addErrorToContainer("Please enter your height in inches");
+              isValid = false;
+            } else if (!isValidInches(inches.value)) {
+              inches.classList.add("error");
+              addErrorToContainer(
+                "Please enter a valid height in inches (0-11)"
+              );
+              isValid = false;
+            }
+            if (!weight.value.trim()) {
+              weight.classList.add("error");
+              addErrorToContainer("Please enter your weight");
+              isValid = false;
+            } else if (!isValidWeight(weight.value)) {
+              weight.classList.add("error");
+              addErrorToContainer("Please enter a valid weight (50-500 lbs)");
+              isValid = false;
+            }
+          } else if (step === 5) {
+            // Validate desired weight
+            const desiredWeight = document.getElementById("desiredWeight");
+
+            if (!desiredWeight.value.trim()) {
+              desiredWeight.classList.add("error");
+              addErrorToContainer("Please enter your desired weight");
+              isValid = false;
+            } else if (!isValidDesiredWeight(desiredWeight.value)) {
+              desiredWeight.classList.add("error");
+              addErrorToContainer(
+                "Please enter a valid desired weight (50-500 lbs)"
+              );
+              isValid = false;
+            }
+          }
+
+          return isValid;
+        }
+
+        // Function to show error message
+        function showError(element, message) {
+          const errorDiv = document.createElement("div");
+          errorDiv.className = "error-message";
+          errorDiv.textContent = message;
+          element.parentNode.insertBefore(errorDiv, element.nextSibling);
+        }
+
+        // Function to add error to the error container below the button
+        function addErrorToContainer(message) {
+          const errorContainer = document.getElementById("form-errors");
+          const errorDiv = document.createElement("div");
+          errorDiv.className = "error-message";
+          errorDiv.textContent = message;
+          errorContainer.appendChild(errorDiv);
+        }
+
+        // Function to clear all error messages from the container
+        function clearErrorMessages() {
+          const errorContainer = document.getElementById("form-errors");
+          errorContainer.innerHTML = "";
+        }
+
+        // Function to validate email format
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        // Function to validate day
+        function isValidDay(day) {
+          const dayNum = parseInt(day);
+          return dayNum >= 1 && dayNum <= 31;
+        }
+
+        // Function to validate year
+        function isValidYear(year) {
+          const yearNum = parseInt(year);
+          const currentYear = new Date().getFullYear();
+          return yearNum >= 1900 && yearNum <= currentYear;
+        }
+
+        // Function to validate complete date
+        function isValidDate(month, day, year) {
+          const monthNum = parseInt(month);
+          const dayNum = parseInt(day);
+          const yearNum = parseInt(year);
+
+          // Create date object and check if it's valid
+          const date = new Date(yearNum, monthNum - 1, dayNum);
+          return (
+            date.getFullYear() === yearNum &&
+            date.getMonth() === monthNum - 1 &&
+            date.getDate() === dayNum
+          );
+        }
+
+        // Function to validate feet
+        function isValidFeet(feet) {
+          const feetNum = parseInt(feet);
+          return feetNum >= 1 && feetNum <= 8;
+        }
+
+        // Function to validate inches
+        function isValidInches(inches) {
+          const inchesNum = parseInt(inches);
+          return inchesNum >= 0 && inchesNum <= 11;
+        }
+
+        // Function to validate weight
+        function isValidWeight(weight) {
+          const weightNum = parseInt(weight);
+          return weightNum >= 50 && weightNum <= 500;
+        }
+
+        // Function to validate desired weight
+        function isValidDesiredWeight(desiredWeight) {
+          const weightNum = parseInt(desiredWeight);
+          return weightNum >= 50 && weightNum <= 500;
+        }
+
+        // Function to go to next step
+        function nextStep() {
+          if (validateStep(currentStep)) {
+            if (currentStep < totalSteps) {
+              currentStep++;
+              showStep(currentStep);
+              updateButtonStates();
+            } else {
+              // Submit form on last step
+              submitForm();
+            }
+          }
+        }
+
+        // Function to go to previous step
+        function prevStep() {
+          if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+            updateButtonStates();
+          }
+        }
+
+        // Function to update button states and visibility
+        function updateButtonStates() {
+          const backBtn = document.getElementById("back-btn");
+          const nextBtn = document.getElementById("next-btn");
+
+          // Show/hide back button
+          if (currentStep > 1) {
+            backBtn.style.display = "flex";
+          } else {
+            backBtn.style.display = "none";
+          }
+
+          // Update next button text
+          if (currentStep === totalSteps) {
+            nextBtn.value = "Submit";
+          } else {
+            nextBtn.value = "Next";
+          }
+        }
+
+        // Function to submit form
+        function submitForm() {
           // Show loading state
-          const submitBtn = document.getElementById("submit-btn");
+          const submitBtn = document.getElementById("next-btn");
           const originalText = submitBtn.value;
           submitBtn.value = "Sending...";
           submitBtn.disabled = true;
@@ -326,6 +831,13 @@
             gender:
               document.querySelector('input[name="gender"]:checked')?.value ||
               null,
+            month: document.getElementById("month").value,
+            day: document.getElementById("day").value,
+            year: document.getElementById("year").value,
+            feet: document.getElementById("feet").value,
+            inches: document.getElementById("inches").value,
+            weight: document.getElementById("weight").value,
+            desiredWeight: document.getElementById("desiredWeight").value,
             email: document.getElementById("email").value,
             phone: document.getElementById("phone").value,
             emailConsent: document.getElementById("check").checked,
@@ -342,6 +854,13 @@
           console.log("First Name:", formData.firstName);
           console.log("Last Name:", formData.lastName);
           console.log("Gender:", formData.gender);
+          console.log(
+            "Date of Birth:",
+            `${formData.month}/${formData.day}/${formData.year}`
+          );
+          console.log("Height:", `${formData.feet}'${formData.inches}"`);
+          console.log("Weight:", `${formData.weight} lbs`);
+          console.log("Desired Weight:", `${formData.desiredWeight} lbs`);
           console.log("Email:", formData.email);
           console.log("Phone:", formData.phone);
           console.log("Email Consent:", formData.emailConsent);
@@ -358,6 +877,10 @@
             first_name: formData.firstName,
             last_name: formData.lastName,
             gender: formData.gender || "Not specified",
+            date_of_birth: `${formData.month}/${formData.day}/${formData.year}`,
+            height: `${formData.feet}'${formData.inches}"`,
+            weight: `${formData.weight} lbs`,
+            desired_weight: `${formData.desiredWeight} lbs`,
             phone: formData.phone,
             email_consent: formData.emailConsent ? "Yes" : "No",
             text_consent: formData.textConsent || "Not specified",
@@ -371,6 +894,10 @@ Personal Information:
 - Phone: ${formData.phone}
 - State: ${formData.state}
 - Gender: ${formData.gender || "Not specified"}
+- Date of Birth: ${formData.month}/${formData.day}/${formData.year}
+- Height: ${formData.feet}'${formData.inches}"
+- Weight: ${formData.weight} lbs
+- Desired Weight: ${formData.desiredWeight} lbs
 
 Consent Preferences:
 - Email Marketing: ${formData.emailConsent ? "Yes" : "No"}
@@ -398,9 +925,12 @@ Submitted on: ${new Date().toLocaleString()}
 
               // Reset form
               form.reset();
+              currentStep = 1;
+              showStep(currentStep);
+              updateProgressIndicator(currentStep);
+              updateButtonStates();
 
               // Reset button
-              submitBtn.value = originalText;
               submitBtn.disabled = false;
             })
             .catch(function (error) {
@@ -415,7 +945,83 @@ Submitted on: ${new Date().toLocaleString()}
               submitBtn.value = originalText;
               submitBtn.disabled = false;
             });
-        });
+        }
+
+        // Handle Next/Submit button click
+        const nextBtn = document.getElementById("next-btn");
+        nextBtn.addEventListener("click", nextStep);
+
+        // Handle Back button click
+        const backBtn = document.getElementById("back-btn");
+        backBtn.addEventListener("click", prevStep);
+
+        // Initialize the form
+        showStep(currentStep);
+        updateButtonStates();
+
+        // Add event listeners to clear error styling when user starts filling fields
+        function addErrorClearingListeners() {
+          // Clear errors on input fields when user starts typing
+          const inputFields = document.querySelectorAll(
+            ".form-input, .form-select"
+          );
+          inputFields.forEach((field) => {
+            field.addEventListener("input", function () {
+              this.classList.remove("error");
+              clearErrorMessages();
+            });
+            field.addEventListener("change", function () {
+              this.classList.remove("error");
+              clearErrorMessages();
+            });
+          });
+
+          // Clear gender selection error when user selects an option
+          const genderCheckboxes = document.querySelectorAll(
+            'input[name="gender"]'
+          );
+          genderCheckboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              document.querySelectorAll(".gender-option").forEach((option) => {
+                option.classList.remove("error");
+              });
+              clearErrorMessages();
+            });
+          });
+
+          // Clear text consent error when user selects an option
+          const textConsentCheckboxes = document.querySelectorAll(
+            'input[name="text_consent"]'
+          );
+          textConsentCheckboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              document.querySelectorAll(".consent-option").forEach((option) => {
+                option.classList.remove("error");
+              });
+              clearErrorMessages();
+            });
+          });
+
+          // Clear other consent errors when user checks them
+          const emailConsent = document.getElementById("check");
+          if (emailConsent) {
+            emailConsent.addEventListener("change", function () {
+              this.classList.remove("error");
+              clearErrorMessages();
+            });
+          }
+
+          const smsConsent = document.getElementById("checked");
+          if (smsConsent) {
+            smsConsent.addEventListener("change", function () {
+              this.classList.remove("error");
+              clearErrorMessages();
+            });
+          }
+        }
+
+        // Initialize error clearing listeners
+        addErrorClearingListeners();
       });
     </script>
   </body>
