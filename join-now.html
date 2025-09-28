@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/join-now.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
@@ -266,6 +271,10 @@
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("join-form");
 
+        // Initialize EmailJS with your public key
+        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        emailjs.init("tmG0DUq1XDCHB0RiL");
+
         // Handle gender checkboxes - only allow one selection
         const genderCheckboxes = document.querySelectorAll(
           'input[name="gender"]'
@@ -303,6 +312,12 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault(); // Prevent default form submission
 
+          // Show loading state
+          const submitBtn = document.getElementById("submit-btn");
+          const originalText = submitBtn.value;
+          submitBtn.value = "Sending...";
+          submitBtn.disabled = true;
+
           // Collect form data
           const formData = {
             state: document.getElementById("state").value,
@@ -334,16 +349,72 @@
           console.log("SMS Consent:", formData.smsConsent);
           console.log("=====================================");
 
-          // You can also log the entire object
-          console.log("Complete form data object:", formData);
+          // Prepare email template parameters
+          const templateParams = {
+            to_email: "osamaaslam029@gmail.com", // Replace with your email
+            from_name: `${formData.firstName} ${formData.lastName}`,
+            from_email: formData.email,
+            state: formData.state,
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            gender: formData.gender || "Not specified",
+            phone: formData.phone,
+            email_consent: formData.emailConsent ? "Yes" : "No",
+            text_consent: formData.textConsent || "Not specified",
+            sms_consent: formData.smsConsent ? "Yes" : "No",
+            message: `
+New Registration Form Submission:
 
-          // Optional: Show success message
-          alert(
-            "Form submitted successfully! Check the console for form data."
-          );
+Personal Information:
+- Name: ${formData.firstName} ${formData.lastName}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- State: ${formData.state}
+- Gender: ${formData.gender || "Not specified"}
 
-          // Optional: Reset form after submission
-          // form.reset();
+Consent Preferences:
+- Email Marketing: ${formData.emailConsent ? "Yes" : "No"}
+- Text Messages: ${formData.textConsent || "Not specified"}
+- SMS Consent: ${formData.smsConsent ? "Yes" : "No"}
+
+Submitted on: ${new Date().toLocaleString()}
+            `,
+          };
+
+          // Send email using EmailJS
+          emailjs
+            .send("service_jn4breg", "template_upfh1rs", templateParams)
+            .then(function (response) {
+              console.log(
+                "Email sent successfully!",
+                response.status,
+                response.text
+              );
+
+              // Show success message
+              alert(
+                "Thank you! Your information has been submitted successfully. We'll be in touch soon!"
+              );
+
+              // Reset form
+              form.reset();
+
+              // Reset button
+              submitBtn.value = originalText;
+              submitBtn.disabled = false;
+            })
+            .catch(function (error) {
+              console.error("Failed to send email:", error);
+
+              // Show error message
+              alert(
+                "Sorry, there was an error submitting your form. Please try again or contact us directly."
+              );
+
+              // Reset button
+              submitBtn.value = originalText;
+              submitBtn.disabled = false;
+            });
         });
       });
     </script>
