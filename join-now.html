@@ -67,6 +67,8 @@
             <div class="progress-step" data-step="4">4</div>
             <div class="progress-line"></div>
             <div class="progress-step" data-step="5">5</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="6">6</div>
           </div>
 
           <!-- Step 1: Personal Information & State -->
@@ -397,6 +399,164 @@
             </div>
           </div>
 
+          <!-- Step 6: Medication Question and Recommendations/Current Prescription -->
+          <div class="form-section" id="section-6">
+            <div class="form-label">
+              Do you currently take weight loss medication?
+            </div>
+            <div class="medication-question-options">
+              <label class="medication-option">
+                <div class="medication-input">
+                  <input
+                    type="radio"
+                    name="current_medication"
+                    id="medication-yes"
+                    value="Yes"
+                    class="form-radio"
+                  />
+                  <span class="medication-label">YES</span>
+                </div>
+              </label>
+              <label class="medication-option">
+                <div class="medication-input">
+                  <input
+                    type="radio"
+                    name="current_medication"
+                    id="medication-no"
+                    value="No"
+                    class="form-radio"
+                  />
+                  <span class="medication-label">NO</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Content for NO (medication recommendations) -->
+            <div
+              id="medication-recommendations"
+              class="medication-content"
+              style="display: none"
+            >
+              <div class="recommendation-header">
+                <h2 class="recommendation-title">Here's what we recommend:</h2>
+                <div class="doctor-info">
+                  <img
+                    src="https://join.newself.com/img/steps_doc1.57ffc0ba.png"
+                    alt="Doctor"
+                    class="doctor-avatar"
+                  />
+                  <p class="doctor-message">
+                    Your healthcare practitioner will review your treatment with
+                    you before it's finalized.
+                  </p>
+                </div>
+                <p class="instruction-text">Click to choose:</p>
+              </div>
+
+              <div class="medication-cards">
+                <div class="medication-card" data-medication="tirzepatide">
+                  <div class="medication-badge most-effective">
+                    Most Effective
+                  </div>
+                  <div class="medication-info">
+                    <h3 class="medication-name">Tirzepatide</h3>
+                    <p class="medication-compound">COMPOUND W/ B6</p>
+                    <p class="medication-comparison">
+                      Same active ingredient as <strong>Mounjaro®</strong> &
+                      <strong>Zepbound®</strong>
+                    </p>
+                  </div>
+                  <div class="medication-image">
+                    <img
+                      src="https://join.newself.com/images/Tirz_straight.png"
+                      alt="Tirzepatide"
+                      class="medication-vial"
+                    />
+                  </div>
+                  <div class="medication-price">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">194</span>
+                    <span class="price-cents">.97</span>
+                    <span class="price-period">a month</span>
+                  </div>
+                </div>
+
+                <div class="medication-card" data-medication="semaglutide">
+                  <div class="medication-badge most-popular">Most Popular</div>
+                  <div class="medication-info">
+                    <h3 class="medication-name">Semaglutide</h3>
+                    <p class="medication-compound">COMPOUND W/ B12</p>
+                    <p class="medication-comparison">
+                      Same active ingredient as <strong>Ozempic®</strong> &
+                      <strong>Wegovy®</strong>
+                    </p>
+                  </div>
+                  <div class="medication-image">
+                    <img
+                      src="https://join.newself.com/images/Sema_straight.png"
+                      alt="Semaglutide"
+                      class="medication-vial"
+                    />
+                  </div>
+                  <div class="medication-price">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">105</span>
+                    <span class="price-cents">.97</span>
+                    <span class="price-period">a month</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content for YES (current prescription selection) -->
+            <div
+              id="current-prescription"
+              class="medication-content"
+              style="display: none"
+            >
+              <h2 class="prescription-title">
+                What weight loss drugs are you currently prescribed?
+              </h2>
+              <div class="prescription-options">
+                <label
+                  class="prescription-option"
+                  data-prescription="semaglutide"
+                >
+                  <input
+                    type="radio"
+                    name="current_prescription"
+                    value="semaglutide"
+                    class="prescription-radio"
+                  />
+                  <div class="prescription-content">
+                    <h3 class="prescription-name">Semaglutide</h3>
+                    <p class="prescription-alternatives">
+                      (Compound, Ozempic, or Wegovy)
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="prescription-option"
+                  data-prescription="tirzepatide"
+                >
+                  <input
+                    type="radio"
+                    name="current_prescription"
+                    value="tirzepatide"
+                    class="prescription-radio"
+                  />
+                  <div class="prescription-content">
+                    <h3 class="prescription-name">Tirzepatide</h3>
+                    <p class="prescription-alternatives">
+                      (Compound, Mounjaro, Zepbound)
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
           <div class="form-submit">
             <button
               type="button"
@@ -424,7 +584,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("join-form");
         let currentStep = 1;
-        const totalSteps = 5;
+        const totalSteps = 6;
 
         // Initialize EmailJS with your public key
         emailjs.init("tmG0DUq1XDCHB0RiL");
@@ -686,6 +846,49 @@
               );
               isValid = false;
             }
+          } else if (step === 6) {
+            // Validate medication question and selection
+            const currentMedication = document.querySelector(
+              'input[name="current_medication"]:checked'
+            );
+
+            // First validate the medication question
+            if (!currentMedication) {
+              document
+                .querySelectorAll(".medication-option")
+                .forEach((option) => {
+                  option.classList.add("error");
+                });
+              addErrorToContainer(
+                "Please select if you currently take weight loss medication"
+              );
+              isValid = false;
+            } else if (currentMedication.value === "No") {
+              // For NO - validate medication recommendation selection
+              const selectedMedication = document.querySelector(
+                ".medication-card.selected"
+              );
+              if (!selectedMedication) {
+                addErrorToContainer(
+                  "Please select a medication recommendation"
+                );
+                isValid = false;
+              }
+            } else if (currentMedication.value === "Yes") {
+              // For YES - validate current prescription selection
+              const currentPrescription = document.querySelector(
+                'input[name="current_prescription"]:checked'
+              );
+              if (!currentPrescription) {
+                document
+                  .querySelectorAll(".prescription-option")
+                  .forEach((option) => {
+                    option.classList.add("error");
+                  });
+                addErrorToContainer("Please select your current prescription");
+                isValid = false;
+              }
+            }
           }
 
           return isValid;
@@ -845,6 +1048,17 @@
               document.querySelector('input[name="text_consent"]:checked')
                 ?.value || null,
             smsConsent: document.getElementById("checked").checked,
+            currentMedication:
+              document.querySelector('input[name="current_medication"]:checked')
+                ?.value || null,
+            selectedMedication:
+              document.querySelector(".medication-card.selected")?.dataset
+                .medication || null,
+            currentPrescription:
+              document.querySelector(
+                'input[name="current_prescription"]:checked'
+              )?.value || null,
+            submitted_date: new Date().toISOString(),
           };
 
           // Log form data to console
@@ -866,6 +1080,9 @@
           console.log("Email Consent:", formData.emailConsent);
           console.log("Text Message Consent:", formData.textConsent);
           console.log("SMS Consent:", formData.smsConsent);
+          console.log("Current Medication:", formData.currentMedication);
+          console.log("Selected Medication:", formData.selectedMedication);
+          console.log("Current Prescription:", formData.currentPrescription);
           console.log("=====================================");
 
           // Prepare email template parameters
@@ -885,6 +1102,9 @@
             email_consent: formData.emailConsent ? "Yes" : "No",
             text_consent: formData.textConsent || "Not specified",
             sms_consent: formData.smsConsent ? "Yes" : "No",
+            current_medication: formData.currentMedication || "",
+            selected_medication: formData.selectedMedication || "",
+            current_prescription: formData.currentPrescription || "",
             message: `
 New Registration Form Submission:
 
@@ -898,6 +1118,15 @@ Personal Information:
 - Height: ${formData.feet}'${formData.inches}"
 - Weight: ${formData.weight} lbs
 - Desired Weight: ${formData.desiredWeight} lbs
+
+Medication Information:
+- Currently Taking Weight Loss Medication: ${
+              formData.currentMedication || "Not specified"
+            }
+- Selected Medication Recommendation: ${
+              formData.selectedMedication || "Not applicable"
+            }
+- Current Prescription: ${formData.currentPrescription || "Not applicable"}
 
 Consent Preferences:
 - Email Marketing: ${formData.emailConsent ? "Yes" : "No"}
@@ -1017,6 +1246,72 @@ Submitted on: ${new Date().toLocaleString()}
               this.classList.remove("error");
               clearErrorMessages();
             });
+          }
+
+          // Clear medication question error when user selects an option
+          const medicationRadios = document.querySelectorAll(
+            'input[name="current_medication"]'
+          );
+          medicationRadios.forEach((radio) => {
+            radio.addEventListener("change", function () {
+              document
+                .querySelectorAll(".medication-option")
+                .forEach((option) => {
+                  option.classList.remove("error");
+                });
+              clearErrorMessages();
+
+              // Show appropriate content in section 6
+              showMedicationContent(this.value);
+            });
+          });
+
+          // Clear prescription selection error when user selects an option
+          const prescriptionRadios = document.querySelectorAll(
+            'input[name="current_prescription"]'
+          );
+          prescriptionRadios.forEach((radio) => {
+            radio.addEventListener("change", function () {
+              document
+                .querySelectorAll(".prescription-option")
+                .forEach((option) => {
+                  option.classList.remove("error");
+                });
+              clearErrorMessages();
+            });
+          });
+
+          // Add click handlers for medication cards
+          const medicationCards = document.querySelectorAll(".medication-card");
+          medicationCards.forEach((card) => {
+            card.addEventListener("click", function () {
+              // Remove selected class from all cards
+              medicationCards.forEach((c) => c.classList.remove("selected"));
+              // Add selected class to clicked card
+              this.classList.add("selected");
+              clearErrorMessages();
+            });
+          });
+        }
+
+        // Function to show appropriate medication content in section 6
+        function showMedicationContent(medicationAnswer) {
+          const recommendationsDiv = document.getElementById(
+            "medication-recommendations"
+          );
+          const prescriptionDiv = document.getElementById(
+            "current-prescription"
+          );
+
+          if (medicationAnswer === "No") {
+            recommendationsDiv.style.display = "block";
+            prescriptionDiv.style.display = "none";
+          } else if (medicationAnswer === "Yes") {
+            recommendationsDiv.style.display = "none";
+            prescriptionDiv.style.display = "block";
+          } else {
+            recommendationsDiv.style.display = "none";
+            prescriptionDiv.style.display = "none";
           }
         }
 

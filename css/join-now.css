@@ -114,7 +114,7 @@ h1 {
 }
 
 .gender-option:hover {
-  background-color: #e9ff86;
+  border-color: #007bff;
 }
 
 .gender-input input[type="checkbox"] {
@@ -216,7 +216,7 @@ h1 {
 }
 
 .consent-option:hover {
-  background-color: #e9ff86;
+  border-color: #007bff;
 }
 
 .consent-input input[type="checkbox"] {
@@ -531,4 +531,306 @@ button:not(:disabled) {
   gap: 10px;
   width: 100%;
   margin-bottom: 35px;
+}
+
+/* Medication Question Styles */
+.medication-question-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.medication-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.medication-option:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.medication-option.error {
+  border-color: #f44336;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2);
+}
+
+.medication-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-radio {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.medication-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Section 6 - Medication Content Styles */
+.medication-content {
+  padding: 20px 0;
+}
+
+/* Recommendation Header */
+.recommendation-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recommendation-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.doctor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-message {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.instruction-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Medication Cards */
+.medication-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.medication-card {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 280px;
+  max-width: 320px;
+}
+
+.medication-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.medication-card.selected {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.medication-badge {
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.medication-badge.most-effective {
+  background-color: #28a745;
+}
+
+.medication-badge.most-popular {
+  background-color: #007bff;
+}
+
+.medication-info {
+  margin-bottom: 15px;
+}
+
+.medication-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.medication-compound {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.medication-comparison {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.medication-image {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.medication-vial {
+  width: 60px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.medication-price {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.price-symbol {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.price-amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price-cents {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.price-period {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Current Prescription Styles */
+.prescription-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.prescription-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.prescription-option {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.prescription-option:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.prescription-option.error {
+  border-color: #f44336;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2);
+}
+
+.prescription-radio {
+  width: 18px;
+  height: 18px;
+  margin-right: 15px;
+}
+
+.prescription-content {
+  flex: 1;
+}
+
+.prescription-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.prescription-alternatives {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medication-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .medication-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .prescription-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prescription-option {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .medication-question-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .medication-option {
+    min-width: 200px;
+  }
 }
