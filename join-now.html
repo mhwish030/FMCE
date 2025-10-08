@@ -587,7 +587,7 @@
         const totalSteps = 6;
 
         // Initialize EmailJS with your public key
-        emailjs.init("tmG0DUq1XDCHB0RiL");
+        emailjs.init("BLDqb2_XNagV4Y3t5");
 
         // Handle gender checkboxes - only allow one selection
         const genderCheckboxes = document.querySelectorAll(
@@ -1061,33 +1061,9 @@
             submitted_date: new Date().toISOString(),
           };
 
-          // Log form data to console
-          console.log("Form submitted with the following data:");
-          console.log("=====================================");
-          console.log("State:", formData.state);
-          console.log("First Name:", formData.firstName);
-          console.log("Last Name:", formData.lastName);
-          console.log("Gender:", formData.gender);
-          console.log(
-            "Date of Birth:",
-            `${formData.month}/${formData.day}/${formData.year}`
-          );
-          console.log("Height:", `${formData.feet}'${formData.inches}"`);
-          console.log("Weight:", `${formData.weight} lbs`);
-          console.log("Desired Weight:", `${formData.desiredWeight} lbs`);
-          console.log("Email:", formData.email);
-          console.log("Phone:", formData.phone);
-          console.log("Email Consent:", formData.emailConsent);
-          console.log("Text Message Consent:", formData.textConsent);
-          console.log("SMS Consent:", formData.smsConsent);
-          console.log("Current Medication:", formData.currentMedication);
-          console.log("Selected Medication:", formData.selectedMedication);
-          console.log("Current Prescription:", formData.currentPrescription);
-          console.log("=====================================");
-
           // Prepare email template parameters
           const templateParams = {
-            to_email: "osamaaslam029@gmail.com", // Replace with your email
+            to_email: "fmcweightloss@gmail.com",
             from_name: `${formData.firstName} ${formData.lastName}`,
             from_email: formData.email,
             state: formData.state,
@@ -1139,7 +1115,7 @@ Submitted on: ${new Date().toLocaleString()}
 
           // Send email using EmailJS
           emailjs
-            .send("service_jn4breg", "template_upfh1rs", templateParams)
+            .send("service_nnik9wj", "template_p6y671r", templateParams)
             .then(function (response) {
               console.log(
                 "Email sent successfully!",
